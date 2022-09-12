@@ -52,7 +52,6 @@
                 android:id="@+id/button_divide"
                 style="@style/button_style"
                 android:layout_marginEnd="@dimen/margin_eight"
-                android:layout_marginRight="@dimen/margin_eight"
                 android:onClick="operationFunction"
                 android:text="@string/button_divide_text" />
 
@@ -86,7 +85,6 @@
                 android:id="@+id/button_subtract"
                 style="@style/button_style"
                 android:layout_marginEnd="@dimen/margin_eight"
-                android:layout_marginRight="@dimen/margin_eight"
                 android:onClick="operationFunction"
                 android:text="@string/button_subtract_text" />
 
@@ -120,7 +118,6 @@
                 android:id="@+id/button_add"
                 style="@style/button_style"
                 android:layout_marginEnd="@dimen/margin_eight"
-                android:layout_marginRight="@dimen/margin_eight"
                 android:onClick="operationFunction"
                 android:text="@string/button_add_text" />
 
@@ -154,7 +151,6 @@
                 android:id="@+id/button_equality"
                 style="@style/button_style"
                 android:layout_marginEnd="@dimen/margin_eight"
-                android:layout_marginRight="@dimen/margin_eight"
                 android:onClick="operationFunction"
                 android:text="@string/button_equality_text" />
 

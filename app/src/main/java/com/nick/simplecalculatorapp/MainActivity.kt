@@ -26,101 +26,115 @@ class MainActivity : AppCompatActivity() {
         when(view.id) {
 
             R.id.button_one -> {
-                val number = editText.text.toString() + "1"
-                editText.setText(number)
+                btnClicked("1")
             }
 
             R.id.button_two -> {
-                val number = editText.text.toString() + "2"
-                editText.setText(number)
+                btnClicked("2")
             }
 
             R.id.button_three -> {
-                val number = editText.text.toString() + "3"
-                editText.setText(number)
+                btnClicked("3")
             }
 
             R.id.button_four -> {
-                val number = editText.text.toString() + "4"
-                editText.setText(number)
+                btnClicked("4")
             }
 
             R.id.button_five -> {
-                val number = editText.text.toString() + "5"
-                editText.setText(number)
+                btnClicked("5")
             }
 
             R.id.button_six -> {
-                val number = editText.text.toString() + "6"
-                editText.setText(number)
+                btnClicked("6")
             }
 
             R.id.button_seven -> {
-                val number = editText.text.toString() + "7"
-                editText.setText(number)
+                btnClicked("7")
             }
 
             R.id.button_eight -> {
-                val number = editText.text.toString() + "8"
-                editText.setText(number)
+                btnClicked("8")
             }
 
             R.id.button_nine -> {
-                val number = editText.text.toString() + "9"
-                editText.setText(number)
+                btnClicked("9")
             }
 
             R.id.button_zero -> {
-                val number = editText.text.toString() + "0"
-                editText.setText(number)
+                btnClicked("0")
             }
 
             R.id.button_dot -> {
-                val number = editText.text.toString() + "."
-                editText.setText(number)
+                btnClicked(".")
             }
 
             R.id.button_clear -> {
-                editText.setText("")
+                clearEditText()
             }
 
             R.id.button_add -> {
-                number1 = editText.text.toString().toFloat()
-                editText.setText("")
-                isAdd = true
+                addClicked()
             }
 
             R.id.button_subtract -> {
-                number1 = editText.text.toString().toFloat()
-                editText.setText("")
-                isSubtract = true
+                subtractClicked()
             }
 
             R.id.button_divide -> {
-                number1 = editText.text.toString().toFloat()
-                editText.setText("")
-                isDivide = true
+                divideClicked()
             }
 
             R.id.button_equality -> {
                 val number2 = editText.text.toString().toFloat()
                 var result = 0.0f
 
-                if (isAdd) {
-                    result = number1 + number2
-                    isAdd = false
-                } else if (isSubtract) {
-                    result = number1 - number2
-                    isSubtract = false
-                } else if (isDivide) {
-                    result = number1 / number2
-                    isDivide = false
+                when {
+                    isAdd -> {
+                        result = number1 + number2
+                        isAdd = false
+                    }
+                    isSubtract -> {
+                        result = number1 - number2
+                        isSubtract = false
+                    }
+                    isDivide -> {
+                        result = number1 / number2
+                        isDivide = false
+                    }
                 }
-
 
                 editText.setText(result.toString())
             }
         }
 
     }
+
+    private fun btnClicked(btnText: String) {
+        val number = editText.text.toString() + btnText
+        editText.setText(number)
+    }
+
+    private fun clearEditText() {
+        editText.setText("")
+    }
+
+    private fun addClicked() {
+        number1 = editText.text.toString().toFloat()
+        clearEditText()
+        isAdd = true
+    }
+
+    private fun subtractClicked() {
+        number1 = editText.text.toString().toFloat()
+        clearEditText()
+        isSubtract = true
+    }
+
+    private fun divideClicked() {
+        number1 = editText.text.toString().toFloat()
+        clearEditText()
+        isDivide = true
+    }
+
 }
