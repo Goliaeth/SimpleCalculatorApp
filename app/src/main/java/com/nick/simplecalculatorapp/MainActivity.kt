@@ -86,25 +86,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.button_equality -> {
-                val number2 = editText.text.toString().toFloat()
-                var result = 0.0f
-
-                when {
-                    isAdd -> {
-                        result = number1 + number2
-                        isAdd = false
-                    }
-                    isSubtract -> {
-                        result = number1 - number2
-                        isSubtract = false
-                    }
-                    isDivide -> {
-                        result = number1 / number2
-                        isDivide = false
-                    }
-                }
-
-                editText.setText(result.toString())
+                equalityClicked()
             }
         }
 
@@ -135,6 +117,28 @@ class MainActivity : AppCompatActivity() {
         number1 = editText.text.toString().toFloat()
         clearEditText()
         isDivide = true
+    }
+
+    private fun equalityClicked() {
+        val number2 = editText.text.toString().toFloat()
+        var result = 0.0f
+
+        when {
+            isAdd -> {
+                result = number1 + number2
+                isAdd = false
+            }
+            isSubtract -> {
+                result = number1 - number2
+                isSubtract = false
+            }
+            isDivide -> {
+                result = number1 / number2
+                isDivide = false
+            }
+        }
+
+        editText.setText(result.toString())
     }
 
 }
