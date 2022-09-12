@@ -6,6 +6,7 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/number_edit_text"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_margin="@dimen/margin_sixteen"
@@ -15,5 +16,118 @@
         android:layout_alignParentTop="true"
         android:padding="@dimen/padding_eight"
         android:background="@drawable/edit_text_border"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:text="@string/button_one_text"
+                style="@style/button_style" />
+
+            <Button
+                android:text="@string/button_two_text"
+                style="@style/button_style"/>
+
+            <Button
+                android:text="@string/button_three_text"
+                style="@style/button_style"/>
+
+            <Button
+                android:text="@string/button_divide_text"
+                style="@style/button_style"
+                android:layout_marginRight="@dimen/margin_eight"
+                android:layout_marginEnd="@dimen/margin_eight"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:text="@string/button_four_text"
+                style="@style/button_style" />
+
+            <Button
+                android:text="@string/button_five_text"
+                style="@style/button_style"/>
+
+            <Button
+                android:text="@string/button_six_text"
+                style="@style/button_style"/>
+
+            <Button
+                android:text="@string/button_subtract_text"
+                style="@style/button_style"
+                android:layout_marginRight="@dimen/margin_eight"
+                android:layout_marginEnd="@dimen/margin_eight"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:text="@string/button_seven_text"
+                style="@style/button_style" />
+
+            <Button
+                android:text="@string/button_eight_text"
+                style="@style/button_style"/>
+
+            <Button
+                android:text="@string/button_nine_text"
+                style="@style/button_style"/>
+
+            <Button
+                android:text="@string/button_add_text"
+                style="@style/button_style"
+                android:layout_marginRight="@dimen/margin_eight"
+                android:layout_marginEnd="@dimen/margin_eight"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:text="@string/button_clear_text"
+                style="@style/button_style" />
+
+            <Button
+                android:text="@string/button_zero_text"
+                style="@style/button_style"/>
+
+            <Button
+                android:text="@string/button_dot_text"
+                style="@style/button_style"/>
+
+            <Button
+                android:text="@string/button_equality_text"
+                style="@style/button_style"
+                android:layout_marginRight="@dimen/margin_eight"
+                android:layout_marginEnd="@dimen/margin_eight"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
